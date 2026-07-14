@@ -561,3 +561,60 @@ body::before {
   .dock-nav.closing a { animation: none; opacity: 0; }
   html { scroll-behavior: auto; }
 }
+
+/* ================= multi-page bits ================= */
+
+/* keep the footer at the bottom even on short pages */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+main { flex: 1; }
+
+/* pages open below the absolute top bar */
+main > .section:first-child { padding-top: 8.5rem; }
+
+/* current page in the nav */
+.top-nav a.active { color: var(--coral); }
+.top-nav a.nav-cta.active { background: var(--coral); }
+
+/* real photo inside the round portrait */
+.portrait {
+  position: relative;
+  overflow: hidden;
+}
+
+.portrait img {
+  object-fit: cover;
+  object-position: 30% 22%;
+}
+
+/* nature photo on the now page */
+.nature-photo {
+  max-width: 22rem;
+  margin: 3.5rem auto 0;
+  padding: 0.8rem 0.8rem 1rem;
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 14px 34px rgb(38 33 43 / 0.14);
+  transform: rotate(-1.6deg);
+}
+
+.nature-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.7rem;
+  display: block;
+}
+
+.nature-photo figcaption {
+  margin-top: 0.7rem;
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+
+/* keep the tilt once revealed */
+.nature-photo.reveal.visible { transform: rotate(-1.6deg); }

@@ -1,12 +1,14 @@
 "use client";
 
 import { useEffect, useRef, useState, type CSSProperties } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const LINKS = [
-  { href: "#about", label: "about" },
-  { href: "#work", label: "work" },
-  { href: "#now", label: "now" },
-  { href: "#contact", label: "say hi" },
+  { href: "/about", label: "about" },
+  { href: "/work", label: "work" },
+  { href: "/now", label: "now" },
+  { href: "/contact", label: "say hi" },
 ];
 
 const THRESHOLD = 160;
@@ -14,6 +16,7 @@ const THRESHOLD = 160;
 type FanState = "top" | "open" | "closing";
 
 export default function SiteNav() {
+  const pathname = usePathname();
   const [fan, setFan] = useState<FanState>("top");
   const isOpen = useRef(false);
   const wasOpenOnce = useRef(false);
@@ -49,22 +52,25 @@ export default function SiteNav() {
   const veiled = fan !== "top";
   const dockOpen = fan === "open";
 
+  const linkClass = (href: string) => {
+    const classes = [];
+    if (href === "/contact") classes.push("nav-cta");
+    if (pathname === href) classes.push("active");
+    return classes.join(" ") || undefined;
+  };
+
   return (
     <>
       {/* the bar itself scrolls away with the page; only the wordmark stays */}
       <header className={`site-header${veiled ? " veiled" : ""}`}>
-        <a className="wordmark" href="#top">
+        <Link className="wordmark" href="/">
           daniel<span className="dot">.</span>
-        </a>
+        </Link>
         <nav className="top-nav">
           {LINKS.map(({ href, label }) => (
-            <a
-              key={href}
-              href={href}
-              className={href === "#contact" ? "nav-cta" : undefined}
-            >
+            <Link key={href} href={href} className={linkClass(href)}>
               {label}
-            </a>
+            </Link>
           ))}
         </nav>
       </header>
@@ -75,14 +81,14 @@ export default function SiteNav() {
         aria-hidden={!dockOpen}
       >
         {LINKS.map(({ href, label }, i) => (
-          <a
+          <Link
             key={href}
             href={href}
             style={{ "--i": i } as CSSProperties}
             tabIndex={dockOpen ? undefined : -1}
           >
             {label}
-          </a>
+          </Link>
         ))}
       </nav>
     </>
