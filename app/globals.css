@@ -441,7 +441,8 @@ body::before {
   padding: 0.05rem 0.8rem;
   font-weight: 600;
   font-size: 0.85rem;
-  margin: 0 0 0.7rem;
+  /* nudged up-left so the label text lines up with the heading below */
+  margin: -0.35rem 0 1.2rem -0.8rem;
 }
 
 .entry h3 { font-size: 1.12rem; margin-bottom: 0.4rem; }
@@ -468,6 +469,17 @@ body::before {
   z-index: -1;
 }
 
+.diag-arrow {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.35rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--coral);
+  opacity: 0.55;
+  z-index: -1;
+}
+
 .now-a { max-width: 26rem; margin: 0 auto 0 0; }
 
 .now-b {
@@ -478,7 +490,7 @@ body::before {
 
 @media (max-width: 40rem) {
   .now-grid { min-height: 0; }
-  .diag { display: none; }
+  .diag, .diag-arrow { display: none; }
   .now-b { text-align: left; margin-top: 1.4rem; }
 }
 
@@ -594,7 +606,7 @@ main > .section:first-child { padding-top: 8.5rem; }
 /* nature photo on the now page */
 .nature-photo {
   max-width: 22rem;
-  margin: 3.5rem auto 0;
+  margin: 5.5rem auto 0;
   padding: 0.8rem 0.8rem 1rem;
   background: #fff;
   border-radius: 1.2rem;

@@ -15,14 +15,23 @@ export default function Now() {
           preserveAspectRatio="none"
           aria-hidden="true"
         >
-          <line
-            x1="100"
-            y1="0"
-            x2="0"
-            y2="100"
+          <path
+            d="M0 100 C 10 90, 16 98, 26 88 S 38 72, 46 62 S 56 54, 64 44 S 74 28, 82 20 S 92 10, 99 2"
+            fill="none"
             stroke="currentColor"
             strokeWidth="0.6"
             strokeDasharray="3 2.4"
+          />
+        </svg>
+        {/* arrowhead drawn separately so it doesn't stretch with the grid */}
+        <svg className="diag-arrow" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M10 5 H19 V14"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
         <p className="now-a reveal">
@@ -52,7 +61,7 @@ export default function Now() {
           height={1600}
         />
         <figcaption>
-          nature does it first, and better — a reminder from the Azores
+          Nature does it first, and better — a reminder from the Azores
         </figcaption>
       </figure>
     </section>
