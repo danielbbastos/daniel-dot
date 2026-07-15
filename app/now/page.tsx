@@ -47,8 +47,8 @@ export default function Now() {
         <Image
           src="/images/coast-flower.jpg"
           alt="A red canna flower over a cliffside Atlantic coastline in the Azores"
-          width={1186}
-          height={1600}
+          width={800}
+          height={1080}
         />
         <figcaption>
           Nature does it first, and better — a reminder from the Azores
