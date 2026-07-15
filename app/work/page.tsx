@@ -88,7 +88,7 @@ export default function Work() {
         </a>
         <a
           className="card card-2 reveal"
-          href="https://github.com/danielbbastos/autoctone"
+          href="https://floresta-autoctone.pt"
           target="_blank"
           rel="noreferrer"
         >
@@ -99,9 +99,9 @@ export default function Work() {
           <p>
             A scrollytelling site about Portugal&apos;s wildfire crisis:
             how native forests resist fire, how eucalyptus took over the
-            landscape — and who profits. Live version coming soon.
+            landscape — and who profits.
           </p>
-          <span className="card-link">peek at the code →</span>
+          <span className="card-link">floresta-autoctone.pt →</span>
         </a>
       </div>
     </section>
