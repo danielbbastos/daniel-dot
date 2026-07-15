@@ -30,19 +30,41 @@ export default function About() {
           for a while to figure out what actually drives me, and landed in
           a small Portuguese startup where everything clicked: React,
           interfaces, and — because the team was tiny — designing the very
-          components I was building. That mix of design and engineering
-          became my signature. It&apos;s still how I work today.
+          components I was building.{" "}
+          <span className="squiggly">
+            That mix of design and engineering became my signature.
+            It&apos;s still how I work today.
+          </span>
         </p>
       </div>
 
+      <div className="deco ring ring-about" aria-hidden="true" />
+      <div className="deco circle about-dot-a" aria-hidden="true" />
+      <div className="deco circle about-dot-b" aria-hidden="true" />
+      <div className="deco about-pill" aria-hidden="true" />
+
       <p className="about-b reveal">
-        What I love most is turning a problem around and looking at it from
-        angles nobody tried yet. When I walk through my city I catch myself
-        studying gardens and public spaces, noticing how the beautiful
-        paths are often the uncomfortable ones. I bring that same eye to
-        software: interfaces should be fluid, practical and accessible for
-        everyone — without giving up beauty.
+        What I love most is turning a problem around and looking at it
+        from angles nobody tried yet. When I walk through my city I catch myself studying gardens and
+        public spaces, noticing how the beautiful paths are often the
+        uncomfortable ones. I bring that same eye to software: interfaces
+        should be fluid, practical and accessible for everyone — without
+        giving up beauty.
       </p>
+
+      <svg
+        className="about-squiggle reveal"
+        viewBox="0 0 200 20"
+        aria-hidden="true"
+      >
+        <path
+          d="M0 10 Q12.5 0 25 10 T50 10 T75 10 T100 10 T125 10 T150 10 T175 10 T200 10"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="3"
+          strokeLinecap="round"
+        />
+      </svg>
 
       <p className="about-c reveal">
         Away from the keyboard I&apos;m a certified permaculture designer
@@ -50,9 +72,20 @@ export default function About() {
         traditional farm, so we watch each other&apos;s methods, compare
         harvests, and both get better. I play chess, make 80s-flavoured
         music on a synth, practice yoga, and run a tiny book club with my
-        girlfriend and friends. Nature figured most things out long before
-        we did; I just try to borrow her patterns.
+        girlfriend and friends.{" "}
+        <span className="squiggly">
+          Nature figured most things out long before we did; I just try to
+          borrow her patterns.
+        </span>
       </p>
+
+      <ul className="about-stickers reveal" aria-label="Things I love">
+        <li className="sticker">🌱 permaculture</li>
+        <li className="sticker">♟️ chess</li>
+        <li className="sticker">🎹 80s synths</li>
+        <li className="sticker">🧘 yoga</li>
+        <li className="sticker">📚 book club</li>
+      </ul>
     </section>
   );
 }

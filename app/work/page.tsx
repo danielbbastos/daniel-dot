@@ -63,6 +63,47 @@ export default function Work() {
           </p>
         </article>
       </div>
+
+      <h2 className="sec-title hl-mint tilt-r reveal projects-title">
+        what I&apos;m building
+      </h2>
+
+      <div className="cards projects">
+        <a
+          className="card card-1 reveal"
+          href="https://github.com/danielbbastos/soapwiz"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span className="card-emoji" aria-hidden="true">
+            🧼
+          </span>
+          <h3>Soapwiz</h3>
+          <p>
+            A soap-making app for iOS. I surveyed the whole market, found
+            every app lacking in interface and features, and built the one
+            I wished existed. Publishing soon.
+          </p>
+          <span className="card-link">peek at the code →</span>
+        </a>
+        <a
+          className="card card-2 reveal"
+          href="https://github.com/danielbbastos/autoctone"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span className="card-emoji" aria-hidden="true">
+            🌲
+          </span>
+          <h3>Autóctone</h3>
+          <p>
+            A scrollytelling site about Portugal&apos;s wildfire crisis:
+            how native forests resist fire, how eucalyptus took over the
+            landscape — and who profits. Live version coming soon.
+          </p>
+          <span className="card-link">peek at the code →</span>
+        </a>
+      </div>
     </section>
   );
 }
