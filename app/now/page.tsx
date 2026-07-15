@@ -15,23 +15,13 @@ export default function Now() {
           preserveAspectRatio="none"
           aria-hidden="true"
         >
+          {/* uniform gentle wave: 14 identical half-waves via Q + reflected T */}
           <path
-            d="M0 100 C 10 90, 16 98, 26 88 S 38 72, 46 62 S 56 54, 64 44 S 74 28, 82 20 S 92 10, 99 2"
+            d="M0 100 Q3.54 93.9 7.07 93 T14.14 86 T21.21 79 T28.29 72 T35.36 65 T42.43 58 T49.5 51 T56.57 44 T63.64 37 T70.71 30 T77.79 23 T84.86 16 T91.93 9 T99 2"
             fill="none"
             stroke="currentColor"
             strokeWidth="0.6"
             strokeDasharray="3 2.4"
-          />
-        </svg>
-        {/* arrowhead drawn separately so it doesn't stretch with the grid */}
-        <svg className="diag-arrow" viewBox="0 0 24 24" aria-hidden="true">
-          <path
-            d="M10 5 H19 V14"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.4"
-            strokeLinecap="round"
-            strokeLinejoin="round"
           />
         </svg>
         <p className="now-a reveal">
