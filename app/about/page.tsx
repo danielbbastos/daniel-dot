@@ -13,8 +13,8 @@ export default function About() {
           <div className="deco rect-tilt" aria-hidden="true" />
           <div className="portrait">
             <Image
-              src="/images/daniel-azores.jpg"
-              alt="Daniel sitting on a wooden fence above the Atlantic, in the Azores"
+              src="/images/daniel-portrait.jpg"
+              alt="Daniel smiling above a valley of terraced rice fields"
               fill
               sizes="13rem"
               priority
