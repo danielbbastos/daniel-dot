@@ -11,7 +11,7 @@ export default function Contact() {
       <div className="deco confetti c4" aria-hidden="true" />
       <div className="deco ring ring-contact" aria-hidden="true" />
 
-      <h2 className="sec-title hl-coral tilt-l reveal">say hi ✌️</h2>
+      <h1 className="sec-title hl-coral tilt-l reveal">say hi ✌️</h1>
       <p className="contact-line reveal">
         The best way to reach me is by email — I read everything, even if
         I&apos;m slow sometimes.

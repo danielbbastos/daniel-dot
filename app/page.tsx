@@ -4,7 +4,6 @@ import WaveSep from "@/components/WaveSep";
 export default function Home() {
   return (
     <>
-      {/* ============ HERO ============ */}
       <section className="hero">
         <div className="deco blob blob-a" aria-hidden="true" />
         <div className="deco blob blob-b" aria-hidden="true" />
@@ -41,7 +40,6 @@ export default function Home() {
 
       <WaveSep />
 
-      {/* ============ WHAT I DO ============ */}
       <section className="section skills-section">
         <div className="clouds" aria-hidden="true">
           <span className="cloud cloud-1" />

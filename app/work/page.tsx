@@ -5,23 +5,22 @@ export const metadata: Metadata = { title: "work" };
 export default function Work() {
   return (
     <section className="section work-section">
-      <h2 className="sec-title hl-sky tilt-l reveal">where I&apos;ve been</h2>
+      <h1 className="sec-title hl-sky tilt-l reveal">where I&apos;ve been</h1>
 
       <div className="timeline">
         <article className="entry reveal">
           <p className="entry-when">Now</p>
-          <h3>Building my own things</h3>
+          <h2>Building my own things</h2>
           <p>
-            A soap-making app for iOS — I surveyed the whole market, found
-            every app lacking in interface and features, and built the one
-            I wished existed (publishing soon). Also this site, and an
-            educational page about eucalyptus monoculture and the wildfires
-            it fuels in Portugal — because nature belongs to everyone.
+            A soap-making app for iOS, this site, and an educational page
+            about eucalyptus monoculture and the wildfires it fuels in
+            Portugal — because nature belongs to everyone. More on all of
+            them just below.
           </p>
         </article>
         <article className="entry reveal">
           <p className="entry-when">The reset</p>
-          <h3>Permaculture &amp; grounding</h3>
+          <h2>Permaculture &amp; grounding</h2>
           <p>
             After a mass layoff and some personal storms, I stepped back to
             rest and reconnect with nature. I took a permaculture design
@@ -31,7 +30,7 @@ export default function Work() {
         </article>
         <article className="entry reveal">
           <p className="entry-when">US company</p>
-          <h3>Frontend developer</h3>
+          <h2>Frontend developer</h2>
           <p>
             Built websites for the group&apos;s portfolio of brands with
             React, Shopify and server-side rendering. The best team
@@ -42,7 +41,7 @@ export default function Work() {
         </article>
         <article className="entry reveal">
           <p className="entry-when">PT startup</p>
-          <h3>Frontend developer &amp; co-designer</h3>
+          <h2>Frontend developer &amp; co-designer</h2>
           <p>
             Joined a small team, fell in love with React, and doubled as
             the designer — shaping components, layouts and the
@@ -53,7 +52,7 @@ export default function Work() {
         </article>
         <article className="entry reveal">
           <p className="entry-when">Where it started</p>
-          <h3>Backend &amp; freelance roots</h3>
+          <h2>Backend &amp; freelance roots</h2>
           <p>
             Freelance sites with Shopify and Ruby on Rails while still
             studying, then a first job doing PL/SQL and Java for an Oracle

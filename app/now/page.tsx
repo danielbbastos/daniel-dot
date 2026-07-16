@@ -5,8 +5,8 @@ export const metadata: Metadata = { title: "now" };
 
 export default function Now() {
   return (
-    <section className="section now-section">
-      <h2 className="sec-title hl-lilac tilt-r reveal">right now</h2>
+    <section className="section">
+      <h1 className="sec-title hl-lilac tilt-r reveal">right now</h1>
 
       <div className="now-grid">
         <svg
