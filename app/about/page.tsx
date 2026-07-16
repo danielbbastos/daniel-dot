@@ -5,8 +5,8 @@ export const metadata: Metadata = { title: "about" };
 
 export default function About() {
   return (
-    <section className="section about-section">
-      <h2 className="sec-title hl-sun tilt-l reveal">who I am</h2>
+    <section className="section">
+      <h1 className="sec-title hl-sun tilt-l reveal">who I am</h1>
 
       <div className="about-grid">
         <div className="portrait-wrap reveal">

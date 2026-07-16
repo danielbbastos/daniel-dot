@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // static export so the site can be hosted on GitHub Pages
+  // static export — the site needs no server runtime
   output: "export",
   images: { unoptimized: true },
 };
