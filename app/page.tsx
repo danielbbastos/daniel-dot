@@ -4,13 +4,15 @@ import WaveSep from "@/components/WaveSep";
 export default function Home() {
   return (
     <>
-      <section className="hero">
+      <div className="deco-container" aria-hidden="true">
         <div className="deco blob blob-a" aria-hidden="true" />
         <div className="deco blob blob-b" aria-hidden="true" />
         <div className="deco ring ring-hero" aria-hidden="true" />
         <div className="deco circle circle-hero" aria-hidden="true" />
         <div className="deco pill-shape" aria-hidden="true" />
-
+      </div>
+      
+      <section className="hero">
         <p className="sticker reveal">✦ open to remote work</p>
         <h1 className="reveal">
           I build interfaces where{" "}
@@ -18,7 +20,7 @@ export default function Home() {
           people feel at home.
         </h1>
         <p className="hero-sub reveal">
-          Frontend developer from Portugal 🇵🇹, somewhere between engineering,
+          Product engineer from Portugal 🇵🇹, somewhere between engineering,
           design and product. Currently looking for a small remote team with
           good energy — and taking a lot of inspiration from nature along the
           way.
@@ -55,26 +57,26 @@ export default function Home() {
             <h3>Frontend engineering</h3>
             <p>
               React, TypeScript and Next.js are home. I&apos;ve also done my
-              share of backend with Node.js — and survived PL/SQL — so
-              I&apos;m comfortable across the whole stack of a product.
+              share of backend with Node.js — and survived PL/SQL — so I&apos;m
+              comfortable across the whole stack of a product.
             </p>
           </div>
           <div className="card card-2 reveal">
             <span className="card-emoji">🎨</span>
             <h3>Design that thinks of people</h3>
             <p>
-              I design what I build: components, layouts, whole interfaces.
-              I put myself in the user&apos;s shoes first and make things
-              that feel effortless to navigate — and still look good.
+              I design what I build: components, layouts, whole interfaces. I
+              put myself in the user&apos;s shoes first and make things that
+              feel effortless to navigate — and still look good.
             </p>
           </div>
           <div className="card card-3 reveal">
             <span className="card-emoji">🌀</span>
             <h3>Seeing problems sideways</h3>
             <p>
-              My favourite part of the job: understanding <em>why</em>{" "}
-              something breaks, looking at it from every perspective, and
-              finding the non-obvious fix that actually holds.
+              My favourite part of the job: understanding <em>why</em> something
+              breaks, looking at it from every perspective, and finding the
+              non-obvious fix that actually holds.
             </p>
           </div>
         </div>
