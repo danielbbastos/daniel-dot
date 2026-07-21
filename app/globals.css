@@ -16,7 +16,9 @@
   --sun:   #ffc94d;
   --peach: #ffd9c7;
 
-  --max: 52rem;
+  /* shared content width for .section and .hero;
+     .skills-section (62rem) and .wave-sep (34rem) override it on purpose */
+  --content-max: 52rem;
 }
 
 * { box-sizing: border-box; }
@@ -154,11 +156,6 @@ body::before {
   main > .section:first-child { padding-top: 7.5rem; }
 }
 
-/* small phones: the link row drops below the fixed wordmark */
-@media (max-width: 30rem) {
-  .site-header { padding-top: 3.3rem; }
-}
-
 /* ================= docked nav: fan down the left edge =================
    Each link is anchored at the wordmark and swings from horizontal
    (rotate -95deg ≈ pointing right) down to vertical (rotate 0) —
@@ -226,7 +223,7 @@ body::before {
 
 .section {
   position: relative;
-  max-width: var(--max);
+  max-width: var(--content-max);
   margin: 0 auto;
   padding: 5.5rem 1.5rem;
 }
@@ -258,6 +255,15 @@ body::before {
 
 .wave-sep svg { display: block; width: 100%; height: 34px; }
 
+.deco-container {
+  width: 100dvw;
+  height: 100dvh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
 .deco { position: absolute; z-index: -1; pointer-events: none; }
 
 .ring   { border: 4px solid var(--coral); border-radius: 50%; }
@@ -267,7 +273,7 @@ body::before {
 
 .hero {
   position: relative;
-  max-width: var(--max);
+  max-width: var(--content-max);
   margin: 0 auto;
   padding: 11rem 1.5rem 7rem;
 }
@@ -435,7 +441,7 @@ body::before {
   .about-squiggle { margin: 0 0 1.8rem; }
   /* shapes peek in from the edges, out of the full-width text column */
   .ring-about { width: 3.2rem; height: 3.2rem; top: 46%; left: -1.6rem; opacity: 0.6; }
-  .about-pill { width: 5.5rem; bottom: auto; top: 62%; left: auto; right: -2.6rem; opacity: 0.45; }
+  .about-pill { width: 5.5rem; bottom: auto; top: 62%; left: auto; opacity: 0.45; }
   .about-dot-a { right: 3%; }
 }
 
@@ -443,7 +449,17 @@ body::before {
 
 .skills-section { max-width: 62rem; }
 
-.clouds { position: absolute; inset: 0; z-index: -1; overflow: visible; }
+.clouds {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  /* clip at the screen edges rather than the section: percentages inside
+     inset() resolve against this box, so calc(50% - 50vw) is negative by
+     exactly the page margin on desktop (clouds bleed out) and 0 once the
+     section fills the viewport (nothing leaves the screen). -50vh leaves
+     the vertical axis unclipped. */
+  clip-path: inset(-50vh calc(50% - 50vw));
+}
 
 .cloud {
   position: absolute;
