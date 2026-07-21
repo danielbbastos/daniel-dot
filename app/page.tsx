@@ -18,7 +18,7 @@ export default function Home() {
           people feel at home.
         </h1>
         <p className="hero-sub reveal">
-          Frontend developer from Portugal 🇵🇹, somewhere between engineering,
+          Product engineer from Portugal 🇵🇹, somewhere between engineering,
           design and product. Currently looking for a small remote team with
           good energy — and taking a lot of inspiration from nature along the
           way.

@@ -16,11 +16,11 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: {
-    default: "Daniel Bastos — frontend developer",
+    default: "Daniel Bastos — product engineer",
     template: "%s · Daniel Bastos",
   },
   description:
-    "Daniel Bastos — frontend developer from Portugal, somewhere between code, design and product. Inspired by nature, looking for a small remote team with good energy.",
+    "Daniel Bastos — product engineer from Portugal, somewhere between code, design and product. Inspired by nature, looking for a small remote team with good energy.",
 };
 
 export default function RootLayout({
