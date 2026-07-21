@@ -1,7 +1,7 @@
 /* ------------------------------------------------------------------
    Daniel Bastos — personal site
    One warm background, texture and shapes instead of color blocks.
-   Nav fans down the left edge on scroll.
+   Nav fans down the left edge on scroll; phones pin the top bar instead.
 ------------------------------------------------------------------- */
 
 :root {
@@ -61,7 +61,7 @@ body::before {
 
 /* ================= top bar ================= */
 
-/* the bar itself scrolls away with the page; only the wordmark stays */
+/* on desktop the bar scrolls away and only the wordmark stays; phones pin it */
 .site-header {
   position: absolute;
   top: 0; left: 0; right: 0;
@@ -131,8 +131,23 @@ body::before {
 /* breakpoint scale: 30rem small phones (nav stacks) · 40rem phones
    (layout reflows, deco repositioning) · 48rem tablets (timeline single-col) */
 @media (max-width: 40rem) {
-  .site-header { padding: 0.9rem 0.75rem; }
+  /* phones keep the whole bar pinned instead of fanning — see .dock-nav below */
+  .site-header {
+    position: fixed;
+    padding: 0.9rem 0.75rem;
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 16px rgb(38 33 43 / 0.08);
+  }
   .wordmark { top: 0.5rem; left: 0.75rem; font-size: 1.15rem; }
+  /* the pill exists to hide the fan behind the wordmark; no fan here */
+  .site-header.veiled .wordmark {
+    background: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
   .top-nav { gap: 0.15rem; }
   .top-nav a { font-size: 0.9rem; padding: 0.55rem 0.45rem; }
   .top-nav a.nav-cta { padding: 0.45rem 0.8rem; margin-left: 0.25rem; }
@@ -180,9 +195,9 @@ body::before {
 
 .dock-nav a:hover { color: var(--coral); }
 
+/* phones use the pinned top bar instead */
 @media (max-width: 40rem) {
-  .dock-nav { left: 1rem; top: 1.4rem; }
-  .dock-nav a { background: rgb(255 255 255 / 0.95); }
+  .dock-nav { display: none; }
 }
 
 .dock-nav.open a {
