@@ -223,7 +223,9 @@ body::before {
 
 .section {
   position: relative;
-  max-width: var(--content-max);
+  /* as a property so full-bleed children can work out the page margin */
+  --section-max: var(--content-max);
+  max-width: var(--section-max);
   margin: 0 auto;
   padding: 5.5rem 1.5rem;
 }
@@ -447,18 +449,22 @@ body::before {
 
 /* ================= what I do ================= */
 
-.skills-section { max-width: 62rem; }
+.skills-section { --section-max: 62rem; }
 
 .clouds {
   position: absolute;
-  inset: 0;
+  inset: 0 calc(50% - 50vw); /* widen from the section box out to the screen edges */
   z-index: -1;
-  /* clip at the screen edges rather than the section: percentages inside
-     inset() resolve against this box, so calc(50% - 50vw) is negative by
-     exactly the page margin on desktop (clouds bleed out) and 0 once the
-     section fills the viewport (nothing leaves the screen). -50vh leaves
-     the vertical axis unclipped. */
-  clip-path: inset(-50vh calc(50% - 50vw));
+  /* clip rather than hidden: no scroll container, and unlike clip-path the
+     clouds leave the scrollable overflow region, so they can't widen the page */
+  overflow-x: clip;
+  overflow-y: visible; /* the soft vertical spill into the next section is deliberate */
+}
+
+/* the clouds are placed against the section, not the screen */
+.clouds-inner {
+  position: absolute;
+  inset: 0 max(0px, calc(50vw - var(--section-max) / 2));
 }
 
 .cloud {
@@ -503,7 +509,7 @@ body::before {
 
 /* ================= timeline: zigzag ================= */
 
-.work-section { max-width: 58rem; }
+.work-section { --section-max: 58rem; }
 
 .timeline { position: relative; padding: 1rem 0; }
 

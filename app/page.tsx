@@ -44,9 +44,11 @@ export default function Home() {
 
       <section className="section skills-section">
         <div className="clouds" aria-hidden="true">
-          <span className="cloud cloud-1" />
-          <span className="cloud cloud-2" />
-          <span className="cloud cloud-3" />
+          <div className="clouds-inner">
+            <span className="cloud cloud-1" />
+            <span className="cloud cloud-2" />
+            <span className="cloud cloud-3" />
+          </div>
         </div>
 
         <h2 className="sec-title hl-mint tilt-r reveal">what I do</h2>
